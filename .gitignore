@@ -1,3 +1,12 @@
+# Development/Config folders
+.claude/
+.gemini/
+.specify/
+examples/
+specs/
+tests/
+GEMINI.md
+
 # Python
 __pycache__/
 *.pyc
@@ -40,4 +49,3 @@ config.json
 tmp/
 backtest_report_*.html
 analysis_report.html
-
