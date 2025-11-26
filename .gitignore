@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+
+# Environment
+.env
+.env.*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Project Data
+data/
+market_data/
+example_data/
+*.parquet
+
+# Runtime & Outputs
+config.json
+*.html
+*.log
+tmp/
+backtest_report_*.html
+analysis_report.html
+

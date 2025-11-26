@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DataLab Export Schema",
+  "description": "Schema for exported Parquet files containing StandardizedTick data",
+  "type": "object",
+  "properties": {
+    "timestamp": { "type": "integer", "description": "Nanoseconds since epoch" },
+    "exchange": { "type": "string" },
+    "symbol": { "type": "string" },
+    "bid_price": { "type": "number" },
+    "ask_price": { "type": "number" },
+    "spread_10k": { "type": "number", "description": "Effective spread for $10k" },
+    "spread_50k": { "type": "number", "description": "Effective spread for $50k" },
+    "spread_100k": { "type": "number", "description": "Effective spread for $100k" },
+    "spread_500k": { "type": "number", "description": "Effective spread for $500k" },
+    "liquidity_bid": { "type": "number" },
+    "liquidity_ask": { "type": "number" },
+    "latency_ms": { "type": "number", "description": "Internal processing latency" }
+  },
+  "required": ["timestamp", "exchange", "symbol", "bid_price", "ask_price"]
+}

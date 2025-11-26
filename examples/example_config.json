@@ -1,0 +1,13 @@
+{
+  "collector": {
+    "buffer_size": 100,
+    "spread_threshold": 0.5,
+    "exchanges": [
+      {
+        "name": "simulated",
+        "symbols": ["BTC-USD", "ETH-USD"]
+      }
+    ],
+    "data_dir": "./example_data"
+  }
+}

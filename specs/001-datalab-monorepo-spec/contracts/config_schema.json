@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DataLab Configuration",
+  "description": "Configuration for DataLab Collector and Backtester",
+  "type": "object",
+  "properties": {
+    "collector": {
+      "type": "object",
+      "properties": {
+        "buffer_size": {
+          "type": "integer",
+          "default": 100000,
+          "description": "Number of ticks to keep in memory"
+        },
+        "exchanges": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string", "enum": ["binance", "dydx", "hyperliquid", "simulated"] },
+              "symbols": { "type": "array", "items": { "type": "string" } },
+              "api_key": { "type": "string" },
+              "api_secret": { "type": "string" }
+            },
+            "required": ["name", "symbols"]
+          }
+        },
+        "data_dir": { "type": "string", "default": "./data" }
+      }
+    },
+    "backtest": {
+      "type": "object",
+      "properties": {
+        "start_date": { "type": "string", "format": "date" },
+        "end_date": { "type": "string", "format": "date" },
+        "initial_capital": { "type": "number", "default": 10000.0 },
+        "strategies": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "params": { "type": "object" }
+            },
+            "required": ["name"]
+          }
+        }
+      }
+    }
+  },
+  "required": ["collector"]
+}

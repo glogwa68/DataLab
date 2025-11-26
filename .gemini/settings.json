@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "rworker": {
+      "command": "E:\\Claude\\Speckit-projects\\infWorkers\\build\\rworker-mcp.exe",
+      "args": []
+    }
+  }
+}

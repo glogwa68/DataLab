@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "datalab"
+version = "0.1.0"
+description = "Financial data analysis platform with DEX perpetuals comparison and DCA backtesting"
+requires-python = ">=3.10"
+dependencies = [
+    "aiohttp",
+    "pandas",
+    "numpy",
+    "pyarrow",
+    "plotly"
+]
+
+[project.scripts]
+datalab = "datalab.cli:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-asyncio"
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+pythonpath = ["src"]
